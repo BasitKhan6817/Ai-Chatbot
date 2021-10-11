@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+
+<body>
+    <h4>PKR</h4>
+    <input type="number" placeholder="Convert PKR to USD" id="PKR" />
+    <h4>USD</h4>
+    <input type="number" placeholder=" Convert USD to PKR" id="USD" />
+    <button type="submit" id="btnUSD" onclick="Convertor()">Convert</button>
+    <script>
+
+        const Convertor = () => {
+            const dataUSD = document.getElementById("USD").value;
+            const dataPkr = document.getElementById("PKR").value;
+
+            if (dataPkr) {
+                const result = Number(dataPkr) / 170;
+                console.log(result)
+                dataUSD.value = result;
+                
+            }
+            else {
+                const result = Number(dataUSD) * 170;
+                console.log(result)
+                dataPkr.value = result;
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
