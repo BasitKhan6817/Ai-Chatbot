@@ -21,15 +21,17 @@
             const dataPkr = document.getElementById("PKR").value;
 
             if (dataPkr) {
-                const result = Number(dataPkr) / 170;
+                const result = Number(dataPkr.value) / 170;
+                document.getElementById('USD').value=result;
+                document.getElementById('exchange').innerText=`${convertedusd} PKR`
                 console.log(result)
                 dataUSD.value = result;
                 
             }
             else {
                 const result = Number(dataUSD) * 170;
-                console.log(result)
-                dataPkr.value = result;
+                document.getElementById('pkr').value=convertedpkr;
+                document.getElementById('exchange').innerText=`${convertedpkr} USD`
 
             }
         }
